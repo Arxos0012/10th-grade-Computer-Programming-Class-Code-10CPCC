@@ -1,0 +1,11 @@
+def is_correct(string):
+    syms = {"open": "[{(", "close": "]})"}
+    stack = []
+    for char in string:
+        if char in syms["open"]:
+            stack.append(char)
+        if char in syms["close"]:
+            if stack.pop() != syms["open"][syms["close"].index(char)]:
+                return False
+    if stack == []:
+        return True

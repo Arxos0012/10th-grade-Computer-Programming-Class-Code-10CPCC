@@ -1,0 +1,21 @@
+Strategy
+	Our strategy implements the minimax algorithm in ColorWar. In this algorithm, games
+	for each possible choice are simulated. Each game is simulated to 3 recursive steps,
+	each step being a turn taken by a player. After that the percentage of the board under
+	our possession for each choice is returned. Depending on if that choice was made by
+	our bot or the other bot, the maximum or minimum of those percentages is return
+	respectively. The resulting choice for our bot is the returned.
+	
+Contribution
+	I assisted in implementing minimax into ColorWar as well as doing research on the
+	subject.
+	Nilai assisted with logic and getting rid of errors.
+	
+Challenges
+	Most of the challenges came from implementing minimax into ColorWar correctly. Also
+	simple mistakes such as returning the choice instead of the percentage of the board
+	under possession and grabbing the wrong cell from the board existed.
+	
+The Future
+	As for the future, a more accurate description for the heuristic would have been used.
+	How ever plans to implement this we scrapped due to criteria and time constraints.

@@ -1,0 +1,32 @@
+'''
+Original Version of Logic
+
+def go(self):
+        legal = self.legal_moves()
+        my_color = self.get_color(self.my_row(), self.my_col())
+        region = [[(self.my_row(), self.my_col()), my_color]]
+        border, survey = [], {}
+
+        #Defines the region and bordering cells
+        for cell in region:
+            neighbors = self.get_neighbors(cell)
+            for neighbor in neighbors:
+                if neighbor[1] == my_color and neighbor not in region:
+                    region.append(neighbor)
+                if neighbor[1] in legal and neighbor[1] != my_color and neighbor not in border:
+                    border.append(neighbor)
+
+        #Surveys the bordering cells for their colors
+        for cell in border:
+            if cell[1] not in survey:
+                survey[cell[1]] = 1
+            else:
+                survey[cell[1]] += 1
+
+        #Choices the color of the highest frequency fromt he survey
+        max, choice = float('-inf'), 0
+        for color in survey:
+            if survey[color] > max:
+                choice = color
+        return choice
+'''
